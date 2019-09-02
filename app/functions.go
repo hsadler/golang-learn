@@ -3,6 +3,7 @@ package main
 
 import "fmt"
 
+
 // basic example
 func add(x int, y int) int {
 	return x + y
@@ -13,10 +14,18 @@ func add_again(x, y int) int {
 	return x + y
 }
 
-// multi-result funtion
+// multi-result function
 func swap(x, y string) (string, string) {
 	return y, x
 }
+
+// named return values
+func split(sum int) (x, y int) {
+	x = sum * 4 / 9
+	y = sum - x
+	return
+}
+
 
 func main() {
 
@@ -26,5 +35,8 @@ func main() {
 
 	a, b := swap("hello", "world")
 	fmt.Println(a, b)
+
+	x, y := split(17)
+	fmt.Println(x, y)
 
 }
