@@ -35,10 +35,4 @@ func main() {
 	fmt.Println(sum3)
 
 
-	// infinite loop
-	for {
-		fmt.Println("im in an infinite loop...")
-	}
-
-
 }

@@ -45,9 +45,23 @@ func when_is_saturday() {
 
 }
 
+func greeting() {
+	// example with no inital input, conditionals evaluated per case line
+	t := time.Now()
+	switch {
+	case t.Hour() < 12:
+		fmt.Println("Good morning!")
+	case t.Hour() < 17:
+		fmt.Println("Good afternoon.")
+	default:
+		fmt.Println("Good evening.")
+	}
+}
+
 
 func main() {
 	go_runs_on()
 	when_is_saturday()
+	greeting()
 }
 
