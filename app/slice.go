@@ -119,4 +119,58 @@ func main() {
 	}
 
 
+	// DEMONSTRATION: using 'make' to create dynamically sized arrays
+
+	// make() arg2 specifies length
+	a1 := make([]int, 5)
+	printSlice(a1)
+
+	// make() arg3 specifies capacity
+	b1 := make([]int, 0, 5)
+	printSlice(b1)
+
+	c1 := b1[:2]
+	printSlice(c1)
+
+	d1 := c1[2:5]
+	printSlice(d1)
+
+
+	// DEMONSTRATION: appending to a slice
+
+	var sli []int
+	printSlice(sli)
+
+	// append works on nil slices
+	sli = append(sli, 0)
+	printSlice(sli)
+
+	// slice grows as needed
+	sli = append(sli, 1)
+	printSlice(sli)
+
+	// add more than one element at a time
+	sli = append(sli, 2, 3, 4)
+	printSlice(sli)
+
+
+	// DEMONSTRATION: using 'range' for for-loop iteration
+
+	// for index and value in a slice
+	var my_slice = []string{"a", "b", "c"}
+	for i, v := range my_slice {
+		fmt.Printf("index: %v, value: %v\n", i, v)
+	}
+
+	// use a slice simply for the range iteration
+	for index, _ := range make([]int, 10) {
+		fmt.Printf("index: %v\n", index)
+	}
+
+	// or if you only want just the values
+	for _, value := range []string{"one", "two", "three"} {
+		fmt.Printf("value: %v\n", value)
+	}
+
+
 }
