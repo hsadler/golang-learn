@@ -3,11 +3,15 @@ package main
 
 import (
 	"fmt"
+	"time"
 	"math"
 	"math/rand"
 )
 
 func main() {
+
+	fmt.Println("Welcome!")
+	fmt.Println("The time is", time.Now())
 
 	// using a sub-package
 	fmt.Println("My favorite number is", rand.Intn(10))
