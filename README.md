@@ -6,5 +6,5 @@ Learning Golang
 
 ### Run Golang Example
 ```sh
-go run app/array.go
+go run examples/array.go
 ```
