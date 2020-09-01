@@ -16,5 +16,6 @@ sh examples/run_examples.sh
 
 ### Run web application
 ```sh
-sh web_app/run_web_app.sh
+cd web_app/
+sh run_web_app.sh
 ```
