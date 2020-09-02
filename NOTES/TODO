@@ -2,5 +2,6 @@
 
 TODO:
 	X create example web server
+	- play around with golang backend architecture ideas
 	- looks like I left off here: https://tour.golang.org/methods/9
 
