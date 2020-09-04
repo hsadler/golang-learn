@@ -6,9 +6,11 @@ import(
 	"encoding/json"
 )
 
+
 type User struct {
 	Age int
 }
+
 
 func GetUser(w http.ResponseWriter, req *http.Request) {
 	user := &User{Age:1}
