@@ -10,7 +10,10 @@ import(
 
 func Hello(w http.ResponseWriter, req *http.Request) {
 	payload := "hello"
-	apiResponse := &model.ApiResponse{Success: true, Payload: payload}
+	apiResponse := &model.ApiResponse{
+		Success: true,
+		Payload: payload,
+	}
 	b, err := json.Marshal(apiResponse)
 	if err != nil {
 		fmt.Fprintf(w, err.Error())

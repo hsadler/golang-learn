@@ -7,10 +7,6 @@ import (
 )
 
 
-func hello(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprintf(w, "hello there\n")
-}
-
 func headers(w http.ResponseWriter, req *http.Request) {
 	for name, headers := range req.Header {
 		for _, h := range headers {
@@ -22,10 +18,9 @@ func headers(w http.ResponseWriter, req *http.Request) {
 
 func main() {
 
-	http.HandleFunc("/hello", hello)
 	http.HandleFunc("/headers", headers)
 
-	http.HandleFunc("/hello_alt", api.Hello)
+	http.HandleFunc("/hello", api.Hello)
 	http.HandleFunc("/get_user", api.GetUser)
 
 	http.ListenAndServe(":8090", nil)
