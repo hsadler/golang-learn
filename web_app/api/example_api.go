@@ -3,30 +3,24 @@ package api
 import(
 	"fmt"
 	"net/http"
-	"encoding/json"
-	"web_app/model"
+	"web_app/service/json_api"
 )
 
 
 func Hello(w http.ResponseWriter, req *http.Request) {
+	success := true
 	payload := "hello"
-	apiResponse := &model.ApiResponse{
-		Success: true,
-		Payload: payload,
-	}
-	b, err := json.Marshal(apiResponse)
-	if err != nil {
-		fmt.Fprintf(w, err.Error())
-		return
-	}
-	fmt.Fprintf(w, string(b))
+	json_api.SendRes(w, success, payload)
 }
 
-// func headers(w http.ResponseWriter, req *http.Request) {
-// 	for name, headers := range req.Header {
-// 		for _, h := range headers {
-// 			fmt.Fprintf(w, "%v: %v\n", name, h)
-// 		}
-// 	}
-// }
+func GetHeaders(w http.ResponseWriter, req *http.Request) {
+	success := true
+	payload := ""
+	for name, headers := range req.Header {
+		for _, h := range headers {
+			payload += fmt.Sprintf("%s: %s\n", name, h)
+		}
+	}
+	json_api.SendRes(w, success, payload)
+}
 
