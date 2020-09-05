@@ -4,20 +4,19 @@ import(
 	"fmt"
 	"net/http"
 	"encoding/json"
+	"web_app/model"
+	"web_app/service/json_api"
 )
 
 
-type User struct {
-	Age int
-}
-
-
 func GetUser(w http.ResponseWriter, req *http.Request) {
-	user := &User{Age:1}
+	user := &model.User{Age:1}
 	b, err := json.Marshal(user)
 	if err != nil {
 		fmt.Fprintf(w, err.Error())
 		return
 	}
-	fmt.Fprintf(w, string(b))
+	success := true
+	userJson := string(b)
+	json_api.SendRes(w, success, userJson)
 }
