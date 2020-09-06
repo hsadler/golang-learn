@@ -24,3 +24,7 @@ func GetHeaders(w http.ResponseWriter, req *http.Request) {
 	json_api.SendRes(w, success, payload)
 }
 
+func GetGETParams(w http.ResponseWriter, req *http.Request) {}
+
+func GetPOSTParams(w http.ResponseWriter, req *http.Request) {}
+
