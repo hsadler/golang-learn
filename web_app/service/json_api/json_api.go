@@ -21,3 +21,6 @@ func SendRes(w http.ResponseWriter, success bool, payload string) {
 	fmt.Fprintf(w, string(b))
 }
 
+// TODO: implement more robust options for enpoint responses
+func SendJsonPayloadRes(w http.ResponseWriter, success bool, payload string) {}
+
