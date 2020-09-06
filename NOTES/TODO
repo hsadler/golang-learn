@@ -3,6 +3,19 @@
 TODO:
 	X create example web server
 	X create endpoint test script
-	- play around with golang backend architecture ideas
-	- looks like I left off here: https://tour.golang.org/methods/9
+	X play around with golang backend architecture ideas
+	- more json api service stuff to explore language:
+		- explore use of different response structs
+		- request parsing:
+			- GET params
+			- POST params
+		- file writing
+		- 3rd party api calls
+	- explore attachment of functions to structs
+	- looks like I left off here with example scripts:
+		https://tour.golang.org/methods/9
+	- explore use of 3rd party golang packages
+	- write some cli scripts
+	- thinks of ways to use multithreading
+	- maybe try golang grpc service
 

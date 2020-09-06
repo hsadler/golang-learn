@@ -33,7 +33,7 @@ sh run_web_app.sh
 ```
 
 ### Run endpoint calls
-from root directory
+once app container is running, from root directory
 ```sh
 cd web_app/tests/
 sh test_server_endpoints.sh
