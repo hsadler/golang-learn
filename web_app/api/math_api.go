@@ -18,6 +18,9 @@ func Add(w http.ResponseWriter, req *http.Request) {
 	n2int, _ := strconv.Atoi(n2)
 	addResult := n1int + n2int
 	success := true
-	payload := strconv.Itoa(addResult)
-	json_api.SendRes(w, success, payload)
+	json_api.SendIntApiResponse(
+		w,
+		success,
+		addResult,
+	)
 }

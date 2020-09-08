@@ -18,5 +18,9 @@ func GetUser(w http.ResponseWriter, req *http.Request) {
 	}
 	success := true
 	userJson := string(b)
-	json_api.SendRes(w, success, userJson)
+	json_api.SendJsonApiResponse(
+		w,
+		success,
+		userJson,
+	)
 }

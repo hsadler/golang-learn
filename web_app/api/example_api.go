@@ -10,7 +10,7 @@ import(
 func Hello(w http.ResponseWriter, req *http.Request) {
 	success := true
 	payload := "hello"
-	json_api.SendRes(w, success, payload)
+	json_api.SendStringApiResponse(w, success, payload)
 }
 
 func GetHeaders(w http.ResponseWriter, req *http.Request) {
@@ -21,10 +21,14 @@ func GetHeaders(w http.ResponseWriter, req *http.Request) {
 			payload += fmt.Sprintf("%s: %s\n", name, h)
 		}
 	}
-	json_api.SendRes(w, success, payload)
+	json_api.SendStringApiResponse(w, success, payload)
 }
 
-func GetGETParams(w http.ResponseWriter, req *http.Request) {}
+func GetGETParams(w http.ResponseWriter, req *http.Request) {
+	// stub
+}
 
-func GetPOSTParams(w http.ResponseWriter, req *http.Request) {}
+func GetPOSTParams(w http.ResponseWriter, req *http.Request) {
+	// stub
+}
 
