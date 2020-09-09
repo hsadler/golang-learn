@@ -5,7 +5,7 @@ TODO:
 	X create endpoint test script
 	X play around with golang backend architecture ideas
 	- more json api service stuff to explore language:
-		- explore use of different response structs
+		X explore use of different response structs
 		- request parsing:
 			- GET params
 			- POST params

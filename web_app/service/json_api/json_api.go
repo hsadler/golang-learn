@@ -8,29 +8,21 @@ import(
 )
 
 
-// TODO: deprecate once finer grain response functions are written and
-// dependencies are cut over
-// func SendRes(w http.ResponseWriter, success bool, payload string) {
-// 	apiResponse := &model.ApiResponse{
-// 		Success: success,
-// 		Payload: payload,
-// 	}
-// 	b, err := json.Marshal(apiResponse)
-// 	if err != nil {
-// 		fmt.Fprintf(w, err.Error())
-// 		return
-// 	}
-// 	fmt.Fprintf(w, string(b))
-// }
-
-// TODO: implement more robust options for endpoint responses
-
 func SendBoolApiResponse(
 	w http.ResponseWriter,
 	success bool,
 	boolPayload bool,
 ) {
-	// stub
+	apiResponse := &model.BoolApiResponse{
+		Success: success,
+		BoolPayload: boolPayload,
+	}
+	b, err := json.Marshal(apiResponse)
+	if err != nil {
+		fmt.Fprintf(w, err.Error())
+		return
+	}
+	fmt.Fprintf(w, string(b))
 }
 
 func SendIntApiResponse(
@@ -38,7 +30,16 @@ func SendIntApiResponse(
 	success bool,
 	intPayload int,
 ) {
-	// stub
+	apiResponse := &model.IntApiResponse{
+		Success: success,
+		IntPayload: intPayload,
+	}
+	b, err := json.Marshal(apiResponse)
+	if err != nil {
+		fmt.Fprintf(w, err.Error())
+		return
+	}
+	fmt.Fprintf(w, string(b))
 }
 
 func SendStringApiResponse(
@@ -46,7 +47,16 @@ func SendStringApiResponse(
 	success bool,
 	stringPayload string,
 ) {
-	// stub
+	apiResponse := &model.StringApiResponse{
+		Success: success,
+		StringPayload: stringPayload,
+	}
+	b, err := json.Marshal(apiResponse)
+	if err != nil {
+		fmt.Fprintf(w, err.Error())
+		return
+	}
+	fmt.Fprintf(w, string(b))
 }
 
 func SendJsonApiResponse(
@@ -65,6 +75,4 @@ func SendJsonApiResponse(
 	}
 	fmt.Fprintf(w, string(b))
 }
-
-
 
