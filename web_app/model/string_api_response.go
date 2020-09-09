@@ -1,7 +1,7 @@
 package model
 
-
-type StringApiResponse struct {
-	Success bool
+// StringAPIResponse : TODO
+type StringAPIResponse struct {
+	Success       bool
 	StringPayload string
 }

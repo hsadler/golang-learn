@@ -1,7 +1,7 @@
 package model
 
-
-type IntApiResponse struct {
-	Success bool
+// IntAPIResponse : TODO
+type IntAPIResponse struct {
+	Success    bool
 	IntPayload int
 }

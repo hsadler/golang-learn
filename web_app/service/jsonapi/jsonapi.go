@@ -1,20 +1,20 @@
-package json_api
+package jsonapi
 
-import(
+import (
+	"encoding/json"
 	"fmt"
 	"net/http"
-	"encoding/json"
 	"web_app/model"
 )
 
-
-func SendBoolApiResponse(
+// SendBoolAPIResponse : TODO
+func SendBoolAPIResponse(
 	w http.ResponseWriter,
 	success bool,
 	boolPayload bool,
 ) {
-	apiResponse := &model.BoolApiResponse{
-		Success: success,
+	apiResponse := &model.BoolAPIResponse{
+		Success:     success,
 		BoolPayload: boolPayload,
 	}
 	b, err := json.Marshal(apiResponse)
@@ -25,13 +25,14 @@ func SendBoolApiResponse(
 	fmt.Fprintf(w, string(b))
 }
 
-func SendIntApiResponse(
+// SendIntAPIResponse : TODO
+func SendIntAPIResponse(
 	w http.ResponseWriter,
 	success bool,
 	intPayload int,
 ) {
-	apiResponse := &model.IntApiResponse{
-		Success: success,
+	apiResponse := &model.IntAPIResponse{
+		Success:    success,
 		IntPayload: intPayload,
 	}
 	b, err := json.Marshal(apiResponse)
@@ -42,13 +43,14 @@ func SendIntApiResponse(
 	fmt.Fprintf(w, string(b))
 }
 
-func SendStringApiResponse(
+// SendStringAPIResponse : TODO
+func SendStringAPIResponse(
 	w http.ResponseWriter,
 	success bool,
 	stringPayload string,
 ) {
-	apiResponse := &model.StringApiResponse{
-		Success: success,
+	apiResponse := &model.StringAPIResponse{
+		Success:       success,
 		StringPayload: stringPayload,
 	}
 	b, err := json.Marshal(apiResponse)
@@ -59,14 +61,15 @@ func SendStringApiResponse(
 	fmt.Fprintf(w, string(b))
 }
 
-func SendJsonApiResponse(
+// SendJSONAPIResponse : TODO
+func SendJSONAPIResponse(
 	w http.ResponseWriter,
 	success bool,
-	jsonPayload string,
+	JSONPayload string,
 ) {
-	apiResponse := &model.JsonApiResponse{
-		Success: success,
-		JsonPayload: jsonPayload,
+	apiResponse := &model.JSONAPIResponse{
+		Success:     success,
+		JSONPayload: JSONPayload,
 	}
 	b, err := json.Marshal(apiResponse)
 	if err != nil {
@@ -75,4 +78,3 @@ func SendJsonApiResponse(
 	}
 	fmt.Fprintf(w, string(b))
 }
-

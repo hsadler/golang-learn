@@ -4,6 +4,7 @@ TODO:
 	X create example web server
 	X create endpoint test script
 	X play around with golang backend architecture ideas
+	- use golang linter and formatter to fix all code
 	- more json api service stuff to explore language:
 		X explore use of different response structs
 		- request parsing:

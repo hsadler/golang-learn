@@ -1,18 +1,19 @@
 package api
 
-import(
+import (
 	"fmt"
 	"net/http"
-	"web_app/service/json_api"
+	"web_app/service/jsonapi"
 )
 
-
+// Hello : sample "hello world" endpoint
 func Hello(w http.ResponseWriter, req *http.Request) {
 	success := true
-	payload := "hello"
-	json_api.SendStringApiResponse(w, success, payload)
+	payload := "hello world"
+	jsonapi.SendStringAPIResponse(w, success, payload)
 }
 
+// GetHeaders : endpoint to return request header information in a single string
 func GetHeaders(w http.ResponseWriter, req *http.Request) {
 	success := true
 	payload := ""
@@ -21,14 +22,15 @@ func GetHeaders(w http.ResponseWriter, req *http.Request) {
 			payload += fmt.Sprintf("%s: %s\n", name, h)
 		}
 	}
-	json_api.SendStringApiResponse(w, success, payload)
+	jsonapi.SendStringAPIResponse(w, success, payload)
 }
 
+// GetGETParams : endpoint to gather and return all GET params from request
 func GetGETParams(w http.ResponseWriter, req *http.Request) {
 	// stub
 }
 
+// GetPOSTParams : endpoint to gather and return all POST params from request
 func GetPOSTParams(w http.ResponseWriter, req *http.Request) {
 	// stub
 }
-

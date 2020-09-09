@@ -1,8 +1,6 @@
-
 package main
 
 import "fmt"
-
 
 func defer1() {
 
@@ -26,7 +24,6 @@ func defer2() {
 	fmt.Println("done")
 
 }
-
 
 func main() {
 	defer1()

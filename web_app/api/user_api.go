@@ -1,26 +1,26 @@
 package api
 
-import(
+import (
+	"encoding/json"
 	"fmt"
 	"net/http"
-	"encoding/json"
 	"web_app/model"
-	"web_app/service/json_api"
+	"web_app/service/jsonapi"
 )
 
-
+// GetUser :
 func GetUser(w http.ResponseWriter, req *http.Request) {
-	user := &model.User{Age:1}
+	user := &model.User{Age: 1}
 	b, err := json.Marshal(user)
 	if err != nil {
 		fmt.Fprintf(w, err.Error())
 		return
 	}
 	success := true
-	userJson := string(b)
-	json_api.SendJsonApiResponse(
+	userJSON := string(b)
+	jsonapi.SendJSONAPIResponse(
 		w,
 		success,
-		userJson,
+		userJSON,
 	)
 }

@@ -1,7 +1,7 @@
 package model
 
-
-type JsonApiResponse struct {
-	Success bool
-	JsonPayload string
+// JSONAPIResponse : TODO
+type JSONAPIResponse struct {
+	Success     bool
+	JSONPayload string
 }

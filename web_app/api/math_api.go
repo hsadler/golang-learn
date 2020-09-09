@@ -1,12 +1,12 @@
 package api
 
-import(
-	"strconv"
+import (
 	"net/http"
-	"web_app/service/json_api"
+	"strconv"
+	"web_app/service/jsonapi"
 )
 
-
+// Add : endpoint for adding two numbers and returning the result
 func Add(w http.ResponseWriter, req *http.Request) {
 	n1 := req.FormValue("n1")
 	n2 := req.FormValue("n2")
@@ -18,7 +18,7 @@ func Add(w http.ResponseWriter, req *http.Request) {
 	n2int, _ := strconv.Atoi(n2)
 	addResult := n1int + n2int
 	success := true
-	json_api.SendIntApiResponse(
+	jsonapi.SendIntAPIResponse(
 		w,
 		success,
 		addResult,
