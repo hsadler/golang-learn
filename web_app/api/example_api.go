@@ -27,7 +27,11 @@ func GetHeaders(w http.ResponseWriter, req *http.Request) {
 
 // GetGETParams : endpoint to gather and return all GET params from request
 func GetGETParams(w http.ResponseWriter, req *http.Request) {
-	// stub
+	valString := ""
+	for k, v := range req.URL.Query() {
+		valString += string("key:" + k + " value:" + v[0] + "  ")
+	}
+	jsonapi.SendStringAPIResponse(w, true, valString)
 }
 
 // GetPOSTParams : endpoint to gather and return all POST params from request
