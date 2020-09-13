@@ -7,9 +7,9 @@ TODO:
 	X use golang linter and formatter to fix all code
 	- more json api service stuff to explore language:
 		X explore use of different response structs
-		- request parsing:
-			- GET params
-			- POST params
+		X request parsing:
+			X GET params
+			X POST params
 		- file writing
 		- 3rd party api calls
 	- explore attachment of functions to structs

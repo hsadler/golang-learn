@@ -1,6 +1,7 @@
 package api
 
 import (
+	"encoding/json"
 	"fmt"
 	"net/http"
 	"web_app/service/jsonapi"
@@ -27,14 +28,21 @@ func GetHeaders(w http.ResponseWriter, req *http.Request) {
 
 // GetGETParams : endpoint to gather and return all GET params from request
 func GetGETParams(w http.ResponseWriter, req *http.Request) {
-	valString := ""
+	getParams := make(map[string]string)
 	for k, v := range req.URL.Query() {
-		valString += string("key:" + k + " value:" + v[0] + "  ")
+		getParams[k] = v[0]
 	}
-	jsonapi.SendStringAPIResponse(w, true, valString)
+	b, _ := json.Marshal(getParams)
+	jsonapi.SendJSONAPIResponse(w, true, string(b))
 }
 
 // GetPOSTParams : endpoint to gather and return all POST params from request
 func GetPOSTParams(w http.ResponseWriter, req *http.Request) {
-	// stub
+	req.ParseForm()
+	postParams := make(map[string]string)
+	for k, v := range req.Form {
+		postParams[k] = v[0]
+	}
+	b, _ := json.Marshal(postParams)
+	jsonapi.SendJSONAPIResponse(w, true, string(b))
 }

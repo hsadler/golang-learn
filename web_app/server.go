@@ -14,6 +14,7 @@ func main() {
 	http.HandleFunc(prepend+"/hello", api.Hello)
 	http.HandleFunc(prepend+"/get_headers", api.GetHeaders)
 	http.HandleFunc(prepend+"/get_get_params", api.GetGETParams)
+	http.HandleFunc(prepend+"/get_post_params", api.GetPOSTParams)
 
 	// user api
 	prepend = "/api/user"
