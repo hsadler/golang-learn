@@ -5,6 +5,7 @@ TODO:
 	X create endpoint test script
 	X play around with golang backend architecture ideas
 	X use golang linter and formatter to fix all code
+	X add hot reloading to dev docker container
 	- more json api service stuff to explore language:
 		X explore use of different response structs
 		X request parsing:
