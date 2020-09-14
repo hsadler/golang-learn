@@ -24,6 +24,11 @@ func main() {
 	prepend = "/api/math"
 	http.HandleFunc(prepend+"/add", api.Add)
 
+	prepend = "/api/file_write"
+	http.HandleFunc(prepend+"/write_value_to_file", api.WriteValueToFile)
+	http.HandleFunc(prepend+"/read_value_from_file", api.ReadValueFromFile)
+
+	// serve
 	http.ListenAndServe(":8090", nil)
 
 }
