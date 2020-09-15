@@ -24,5 +24,5 @@ curl "http://localhost:8090/api/file_write/read_value_from_file" \
 	| json_pp
 
 # apartment search api
-curl "http://localhost:8090/api/apartment_search/samtrygg_search?search_term=Bruksvägen" \
+curl "http://localhost:8090/api/apartment_search/samtrygg_search?search_term=Lugnvik" \
 	| json_pp
