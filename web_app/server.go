@@ -29,6 +29,10 @@ func main() {
 	http.HandleFunc(prepend+"/write_value_to_file", api.WriteValueToFile)
 	http.HandleFunc(prepend+"/read_value_from_file", api.ReadValueFromFile)
 
+	// apartment search api
+	prepend = "/api/apartment_search"
+	http.HandleFunc(prepend+"/samtrygg_search", api.SamtryggSearch)
+
 	// serve
 	http.ListenAndServe(":8090", nil)
 

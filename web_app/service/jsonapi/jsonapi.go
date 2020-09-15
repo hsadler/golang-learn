@@ -78,3 +78,21 @@ func SendJSONAPIResponse(
 	}
 	fmt.Fprintf(w, string(b))
 }
+
+// SendAPIResponse : sends api response with payload that can be any value type
+func SendAPIResponse(
+	w http.ResponseWriter,
+	success bool,
+	payload interface{},
+) {
+	apiResponse := &model.APIResponse{
+		Success: success,
+		Payload: payload,
+	}
+	b, err := json.Marshal(apiResponse)
+	if err != nil {
+		fmt.Fprintf(w, err.Error())
+		return
+	}
+	fmt.Fprintf(w, string(b))
+}

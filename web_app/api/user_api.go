@@ -8,7 +8,7 @@ import (
 	"web_app/service/jsonapi"
 )
 
-// GetUser :
+// GetUser : TODO add docstring
 func GetUser(w http.ResponseWriter, req *http.Request) {
 	user := &model.User{Age: 1}
 	b, err := json.Marshal(user)

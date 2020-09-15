@@ -11,8 +11,8 @@ TODO:
 		X request parsing:
 			X GET params
 			X POST params
-		- file writing
-		- 3rd party api calls
+		X file writing
+		X 3rd party api calls
 	- explore attachment of functions to structs
 	- looks like I left off here with example scripts:
 		https://tour.golang.org/methods/9
