@@ -13,7 +13,8 @@ TODO:
 			X POST params
 		X file writing
 		X 3rd party api calls
-	- explore attachment of functions to structs
+	X explore attachment of functions to structs
+	- go through learn-go-with-tests
 	- looks like I left off here with example scripts:
 		https://tour.golang.org/methods/9
 	- explore use of 3rd party golang packages

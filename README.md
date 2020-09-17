@@ -23,6 +23,17 @@ sh examples/run_examples.sh
 
 ---
 
+## Learning Golang with Tests
+
+### Run tests for all subdirectories recursively
+```sh
+cd learn_with_tests/
+go test ./...
+```
+
+
+---
+
 ## Sample JSON API Backend
 
 ### Run app

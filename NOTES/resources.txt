@@ -1,5 +1,6 @@
 
 https://golang.org/
+https://quii.gitbook.io/learn-go-with-tests/
 https://medium.com/@masnun/making-http-requests-in-golang-dd123379efe7
 https://www.sohamkamani.com/blog/2017/10/18/parsing-json-in-golang/
 https://medium.com/a-journey-with-go/go-understand-the-empty-interface-2d9fc1e5ec72
