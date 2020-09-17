@@ -23,7 +23,7 @@ sh examples/run_examples.sh
 
 ---
 
-## Learning Golang with Tests
+## Learning Golang with Tests - from [this](https://quii.gitbook.io/learn-go-with-tests/) resource
 
 ### Run tests for all subdirectories recursively
 ```sh
