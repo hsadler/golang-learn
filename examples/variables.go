@@ -1,8 +1,6 @@
-
 package main
 
 import "fmt"
-
 
 // variable declaration at package level
 var x, y bool
@@ -10,9 +8,7 @@ var x, y bool
 // short assignment not avail at package level
 // k := 3 // throws error
 
-
 func main() {
-
 
 	// assigned default values
 	var i int
@@ -24,7 +20,6 @@ func main() {
 		x, y, i, f, s,
 	)
 
-
 	// initializers
 	var p, j int = 1, 2
 
@@ -33,11 +28,9 @@ func main() {
 
 	fmt.Println(p, j, c, python, java)
 
-
 	// short assignment statement
 	k := 3
 
 	fmt.Println(k)
-
 
 }

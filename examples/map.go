@@ -1,4 +1,3 @@
-
 package main
 
 import "fmt"
@@ -42,7 +41,6 @@ func main() {
 	}
 	printMap(m3)
 
-
 	// DEMONSTRATION: map mutations and data access
 
 	m4 := make(map[string]int)
@@ -62,6 +60,5 @@ func main() {
 	// access a key and confirm it exists in the map
 	v, ok := m4["Answer"]
 	fmt.Println("The value:", v, "Present?", ok)
-
 
 }

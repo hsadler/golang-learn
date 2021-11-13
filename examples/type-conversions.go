@@ -1,4 +1,3 @@
-
 package main
 
 import (
@@ -7,7 +6,6 @@ import (
 )
 
 func main() {
-
 
 	var x, y int = 3, 4
 
@@ -21,12 +19,9 @@ func main() {
 
 	fmt.Println(x, y, z)
 
-
 	// more explicit casting examples
 	i := 64
 	j := string(i)
 	fmt.Println(j)
 
-
 }
-

@@ -1,16 +1,14 @@
-
 package main
 
 import "fmt"
 
 func main() {
 
-
 	// The basic for loop has three components separated by semicolons:
 
-		// the init statement: executed before the first iteration
-		// the condition expression: evaluated before every iteration
-		// the post statement: executed at the end of every iteration
+	// 1. the init statement: executed before the first iteration
+	// 2. the condition expression: evaluated before every iteration
+	// 3. the post statement: executed at the end of every iteration
 
 	sum := 0
 	for i := 0; i < 10; i++ {
@@ -18,14 +16,12 @@ func main() {
 	}
 	fmt.Println(sum)
 
-
 	// init and post statements are optional
-	sum2 := 1
-	for ; sum2 < 1000; {
-		sum2 += sum2
-	}
-	fmt.Println(sum2)
-
+	// sum2 := 1
+	// for ; sum2 < 1000; {
+	// 	sum2 += sum2
+	// }
+	// fmt.Println(sum2)
 
 	// dropped semicolons
 	sum3 := 1
@@ -33,6 +29,5 @@ func main() {
 		sum3 += sum3
 	}
 	fmt.Println(sum3)
-
 
 }

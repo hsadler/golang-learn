@@ -1,11 +1,9 @@
-
 package main
 
 import (
 	"fmt"
 	"math"
 )
-
 
 // examples of 'if' conditional use
 func yes_or_no(yes bool) string {
@@ -34,10 +32,8 @@ func hot_or_cold(temp float64) string {
 	}
 }
 
-
 func main() {
 	fmt.Println(yes_or_no(true), yes_or_no(false))
 	fmt.Println(pow(3, 2, 10), pow(3, 3, 20))
 	fmt.Println(hot_or_cold(99), hot_or_cold(60), hot_or_cold(72))
 }
-

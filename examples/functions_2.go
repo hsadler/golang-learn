@@ -5,9 +5,7 @@ import (
 	"math"
 )
 
-
 func main() {
-
 
 	// DEMONSTRATION: function callbacks
 
@@ -31,7 +29,6 @@ func main() {
 
 	// use standard lib function as callback to another function
 	fmt.Println(compute(math.Pow))
-
 
 	// DEMONSTRATION: function closures
 
@@ -57,10 +54,10 @@ func main() {
 		curr := 0
 		prev := 0
 		return func() int {
-			if(first_time) {
+			if first_time {
 				first_time = false
 				return curr
-			} else if(curr == 0) {
+			} else if curr == 0 {
 				curr = 1
 			} else {
 				next := prev + curr
@@ -74,6 +71,5 @@ func main() {
 	for i := 0; i < 10; i++ {
 		fmt.Println(f())
 	}
-
 
 }

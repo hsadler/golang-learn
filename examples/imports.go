@@ -1,11 +1,10 @@
-
 package main
 
 import (
 	"fmt"
-	"time"
 	"math"
 	"math/rand"
+	"time"
 )
 
 func main() {
@@ -14,6 +13,8 @@ func main() {
 	fmt.Println("The time is", time.Now())
 
 	// using a sub-package
+	// initialize the default source for rand: https://pkg.go.dev/math/rand
+	rand.Seed(time.Now().UnixNano())
 	fmt.Println("My favorite number is", rand.Intn(10))
 
 	// interpolated string print

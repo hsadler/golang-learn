@@ -1,4 +1,3 @@
-
 package main
 
 import (
@@ -29,12 +28,12 @@ func (v *Vertex) Scale(f float64) {
 func main() {
 
 	// NOTES ABOUT METHODS:
-		// - can only be declared in same package as the defined type
-		// - can be attached to any user-defined type, but no built-in types
-		// - can be attached to struct via pointer (more common way since
-		//		allows mutations to the struct)
-		// - calls to v.Scale() are auto-converted to (&v).Scale()
-		// - advice: don't mix value and pointer receivers for each struct type
+	// - can only be declared in same package as the defined type
+	// - can be attached to any user-defined type, but no built-in types
+	// - can be attached to struct via pointer (more common way since
+	//		allows mutations to the struct)
+	// - calls to v.Scale() are auto-converted to (&v).Scale()
+	// - advice: don't mix value and pointer receivers for each struct type
 
 	v := Vertex{3, 4}
 

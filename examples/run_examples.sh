@@ -24,10 +24,9 @@ go run ./examples/structs.go
 go run ./examples/array.go
 go run ./examples/slice.go
 go run ./examples/map.go
-go run ./examples/map.go
 
 # methods
 go run ./examples/methods.go
 go run ./examples/interfaces.go
-# go run ./examples/interfaces.go
+# go run ./examples/interfaces_2.go
 

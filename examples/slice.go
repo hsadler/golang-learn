@@ -1,8 +1,6 @@
-
 package main
 
 import "fmt"
-
 
 func printSlice(s []int) {
 	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
@@ -10,14 +8,12 @@ func printSlice(s []int) {
 
 func main() {
 
-
 	// create array
 	primes := [6]int{2, 3, 5, 7, 11, 13}
 
 	// create slice as a subset of array
 	var primes_slice []int = primes[1:4]
 	fmt.Println(primes_slice)
-
 
 	// DEMONSTRATION: Slices don't copy array values. They are references.
 
@@ -39,7 +35,6 @@ func main() {
 	b[0] = "XXX"
 	fmt.Println(a, b)
 	fmt.Println(names)
-
 
 	// DEMONSTRATION: Slice literals
 
@@ -65,7 +60,6 @@ func main() {
 	}
 	fmt.Println(struct_slice)
 
-
 	// DEMONSTRATION: Slice default indexes
 
 	// create slice
@@ -82,7 +76,6 @@ func main() {
 	// default end index (defaults to length of what's being sliced)
 	s = s[1:]
 	fmt.Println(s)
-
 
 	// DEMONSTRATION: Slice length and capacity
 
@@ -105,7 +98,6 @@ func main() {
 	// sl = sl[:5]
 	// printSlice(sl)
 
-
 	// DEMONSTRATION: nil slice
 
 	var zero_value_slice []int
@@ -117,7 +109,6 @@ func main() {
 	if zero_value_slice == nil {
 		fmt.Println("nil!")
 	}
-
 
 	// DEMONSTRATION: using 'make' to create dynamically sized arrays
 
@@ -134,7 +125,6 @@ func main() {
 
 	d1 := c1[2:5]
 	printSlice(d1)
-
 
 	// DEMONSTRATION: appending to a slice
 
@@ -153,7 +143,6 @@ func main() {
 	sli = append(sli, 2, 3, 4)
 	printSlice(sli)
 
-
 	// DEMONSTRATION: using 'range' for for-loop iteration
 
 	// for index and value in a slice
@@ -171,6 +160,5 @@ func main() {
 	for _, value := range []string{"one", "two", "three"} {
 		fmt.Printf("value: %v\n", value)
 	}
-
 
 }

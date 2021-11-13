@@ -1,4 +1,3 @@
-
 package main
 
 import (
@@ -6,17 +5,15 @@ import (
 	"math/cmplx"
 )
 
-
 // multiple variable declaration as "factored block"
 var (
-	b bool = false
-	s string = "hi there"
-	i int = -1234
-	f float32 = -1234.5678
-	MaxInt uint64 = 1<<64 - 1
-	z complex128 = cmplx.Sqrt(-5 + 12i)
+	b      bool       = false
+	s      string     = "hi there"
+	i      int        = -1234
+	f      float32    = -1234.5678
+	MaxInt uint64     = 1<<64 - 1
+	z      complex128 = cmplx.Sqrt(-5 + 12i)
 )
-
 
 func main() {
 	// print var types and values

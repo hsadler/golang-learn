@@ -1,8 +1,6 @@
-
 package main
 
 import "fmt"
-
 
 // basic example
 func add(x int, y int) int {
@@ -25,7 +23,6 @@ func split(sum int) (x, y int) {
 	y = sum - x
 	return
 }
-
 
 func main() {
 
