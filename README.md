@@ -10,6 +10,7 @@ Learning Golang
 ---
 
 ## Golang Example Scripts
+Based on the "A Tour of Go" language [walkthrough](https://tour.golang.org/)
 
 ### Run single golang example as script
 ```sh
