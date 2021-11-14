@@ -30,7 +30,17 @@ go run ./examples/methods.go
 go run ./examples/interfaces.go
 go run ./examples/interfaces_2.go
 go run ./examples/interfaces_3.go
-
-# type assertions
 go run ./examples/type-assertions.go
+go run ./examples/stringer-interface.go
+
+# errors
+go run ./examples/errors.go
+
+# readers
+go run ./examples/readers.go
+
+# goroutines and channels
+go run ./examples/goroutines.go
+go run ./examples/channels.go
+
 
