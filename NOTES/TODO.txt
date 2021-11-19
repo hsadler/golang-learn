@@ -16,6 +16,7 @@ TODO:
 	X explore attachment of functions to structs
 	X finish tour of Go, looks like I left off here:
 		https://tour.golang.org/methods/10
+	- section devoted to concurrency with golang
 	- go through learn-go-with-tests
 	- explore use of 3rd party golang packages
 	- write some cli scripts
