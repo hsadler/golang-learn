@@ -7,3 +7,5 @@ go run channels_2.go
 go run channels_3.go
 go run channels_4.go
 go run channels_5.go
+go run channels_6.go
+go run channels_7.go
