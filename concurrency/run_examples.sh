@@ -13,3 +13,5 @@ go run channels_7.go
 go run worker_pool.go
 
 go run select.go
+
+go run mutex.go
