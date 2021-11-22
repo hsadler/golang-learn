@@ -11,3 +11,5 @@ go run channels_6.go
 go run channels_7.go
 
 go run worker_pool.go
+
+go run select.go
